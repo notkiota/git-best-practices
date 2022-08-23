@@ -27,7 +27,7 @@ git add {MODIFIED_FILE}
 ### 4. ステージングしたファイルをコミット
 
 ```bash
-git commit {MODIFIED_FILE} -m "{MESSAGGE}"
+git commit -m "{MESSAGGE}"
 ```
 
 ### 5. コミットしたファイルをリモートリポジトリにプル
