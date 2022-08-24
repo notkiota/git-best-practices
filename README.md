@@ -1,4 +1,4 @@
-<p align="center"><img width="150" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/1f423.svg" alt="ひよこ"></p>
+<p align="center" href="#"><img width="150" height="200" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/1f423.svg" alt="ひよこ"></p>
 
 ## Gitにまつわるベストプラクティスをまとめてみたリポジトリ
 リポジトリ名の通り、GitやGithubについてのベストプラクティスをまとめていきます。  
