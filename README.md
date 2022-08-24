@@ -1,6 +1,7 @@
 <p align="center" href="#"><img width="150" height="200" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/1f423.svg" alt="ひよこ"></p>
 
 ## Gitにまつわるベストプラクティスをまとめてみたリポジトリ
+
 リポジトリ名の通り、GitやGithubについてのベストプラクティスをまとめていきます。  
 一週間に一度は草を生やすことを目標に更新します。まずはとっつきやすいように日本語で！
 
