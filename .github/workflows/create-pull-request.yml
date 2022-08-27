@@ -22,7 +22,7 @@ jobs:
           MESSAGE: |
             ### 実行結果
             ```
-            ${{ steps.command.outputs.result }}
+            ${{steps.command.outputs.result}}
             ```
         with:
           script: |
