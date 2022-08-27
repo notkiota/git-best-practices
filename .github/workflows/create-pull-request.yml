@@ -2,10 +2,8 @@ name: Create pull request
 
 # プルリクが作成された時に実行する
 on:
-  push:
-    branches: feat/github-workflows
-
-  workflow_dispatch:
+  pull_request:
+    types: [opened]
 
 jobs:
   build:
