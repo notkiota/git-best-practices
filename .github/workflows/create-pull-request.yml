@@ -12,14 +12,13 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Command
-        id: test
-        run: |
-          cat README.md
+        id: "test"
+        run: echo "AAAAAAAAAAAAAAAAAAAAA"
       
       - name: Comment
         uses: actions/github-script@v3
         env:
-          MESSAGE: ${{ test.outputs }}
+          MESSAGE: ${{ steps.test.outputs }}
         with:
           script: |
             github.issues.createComment({
