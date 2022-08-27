@@ -3,7 +3,10 @@ name: Create pull request
 # プルリクが作成された時に実行する
 on:
   pull_request:
-    types: [opened]
+    types: [
+      opened,
+      edited
+    ]
 
 jobs:
   build:
@@ -23,8 +26,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: """
-              `Hello World!`
+              body: "`echo Hello World!`"
               """
             })
 
