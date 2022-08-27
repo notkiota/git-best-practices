@@ -7,8 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    outputs:
-      output1: ${{ steps.command.outputs.result }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -28,9 +26,9 @@ jobs:
             ```
         with:
           script: |
-            github.issues.createComment({
+            github.issues.createComment(
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: ${{ steps.process.env.MESSAGE }}
-            })
+            )
