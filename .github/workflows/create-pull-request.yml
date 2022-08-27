@@ -13,7 +13,7 @@ jobs:
 
       - name: Ls
         id: command
-        run: ls -la
+        run: echo "hello world!"
       
       - name: Comment
         uses: actions/github-script@v3
