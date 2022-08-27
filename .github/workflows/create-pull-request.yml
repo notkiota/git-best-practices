@@ -13,7 +13,7 @@ jobs:
 
       - name: Ls
         id: command
-        run: echo "hello world!"
+        run: ls -la > output.log
       
       - name: Comment
         uses: actions/github-script@v3
@@ -22,7 +22,7 @@ jobs:
             ### 実行結果を表示します
             #### 実行結果
             ```
-            ${{ steps.command.outputs.result }}
+            ${{ output.log }}
             ```
         with:
           script: |
