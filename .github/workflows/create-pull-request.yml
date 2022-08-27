@@ -2,17 +2,16 @@ name: Create pull request
 
 # プルリクが作成された時に実行する
 on:
-  workflow_dispatch:
+  push:
+    branches: feat/github-workflows
 
 jobs:
-  comment_on_pull_request:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - mame: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
-        with:
-          repository: notkiota/dotfiles
 
-      - name: 
-      - run: echo "Hello World!"
+      - name: Echo
+        run: echo "Hello World!"
 
