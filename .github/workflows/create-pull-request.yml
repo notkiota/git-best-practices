@@ -19,7 +19,7 @@ jobs:
       - name: Comment
         uses: actions/github-script@v3
         env:
-          MESSAGE: ${{ process.test.outputs }}
+          MESSAGE: ${{ test.outputs }}
         with:
           script: |
             github.issues.createComment({
