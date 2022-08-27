@@ -20,13 +20,9 @@ jobs:
         env:
           MESSAGE: |
             ### 実行結果を表示します
-            #### 実行コマンド
-            ```
-            ${{ steps.command.outputs.command-name }} ${{ steps.command.outputs.command-arguments }}
-            ```
             #### 実行結果
             ```
-            ${{ steps.command.outputs }}
+            ${{ steps.command.outputs.result }}
             ```
         with:
           script: |
