@@ -13,22 +13,18 @@ jobs:
 
       - name: Ls
         id: command
-        run: echo "Hello World" > output.log
+        run: |
+          curl https://checkip.amazonaws.com
       
       - name: Comment
         uses: actions/github-script@v3
         env:
-          MESSAGE: |
-            ### 実行結果を表示します
-            #### 実行結果
-            ```
-            ${{ cat output.log }}
-            ```
+          MESSAGE: ${{ steps.command.outputs.result }}
         with:
           script: |
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: process.env.MESSAGE
+              body: $MESSAGE
             })
