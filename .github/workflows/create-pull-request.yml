@@ -13,12 +13,14 @@ jobs:
 
       - name: Command
         id: test
-        run: echo "AAAAAAAAAAAAAAAAAAAAA"
+        run: | 
+          echo "AAAAAAAAAAAAAAAAAAAAA"
       
       - name: Comment
         uses: actions/github-script@v3
         env:
-          MESSAGE: ${{ steps.test.outputs }}
+          MESSAGE: |
+            ${{ steps.test.outputs.result }}
         with:
           script: |
             github.issues.createComment({
