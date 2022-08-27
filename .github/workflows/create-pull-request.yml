@@ -8,8 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      output1: ${{ steps.command.outputs }}
-    needs: output1
+      output1: ${{ steps.command.outputs.result }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -25,7 +24,7 @@ jobs:
           MESSAGE: |
             ### 実行結果
             ```
-            ${{ needs.build.outputs.output1 }}
+            ${{ outputs.output1 }}
             ```
         with:
           script: |
@@ -33,5 +32,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: ${{needs.build.outputs.output1}}
+              body: ${{ process.env.MESSAGE }}
             })
