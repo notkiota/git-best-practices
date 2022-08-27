@@ -20,7 +20,7 @@ jobs:
         uses: actions/github-script@v3
         env:
           MESSAGE: |
-            ${{ steps.test.outputs.test }}
+            ${{ steps.test.outputs.text }}
         with:
           script: |
             github.issues.createComment({
