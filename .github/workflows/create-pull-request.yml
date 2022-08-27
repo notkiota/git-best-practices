@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       output1: ${{ steps.command.outputs }}
+    needs: output1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
