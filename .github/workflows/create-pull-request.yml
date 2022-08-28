@@ -1,0 +1,31 @@
+name: Create pull request
+
+# プルリクが作成された時に実行する
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Command
+        id: test
+        run: | 
+          ls -la > outputs
+      
+      - name: Comment
+        uses: actions/github-script@v3
+        env:
+          MESSAGE: |
+            cat ./outputs
+        with:
+          script: |
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: process.env.MESSAGE
+            })
