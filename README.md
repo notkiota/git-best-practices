@@ -1,5 +1,8 @@
 <p align="center" href="#"><img width="150" height="200" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.0/svg/1f423.svg" alt="ひよこ"></p>
 
+
+<p align="center" href="https://github.com/notkiota/git-best-practices/actions/workflows/hello-world.yml"><img alt="Hello World" src="https://github.com/notkiota/git-best-practices/actions/workflows/hello-world.yml/badge.svg" /></p>
+
 ## Gitにまつわるベストプラクティスをまとめてみたリポジトリ
 
 リポジトリ名の通り、GitやGithubについてのベストプラクティスをまとめていきます。  
@@ -10,7 +13,7 @@
 ### 1. まずはリモートリポジトリをクローン（ローカルリポジトリを作成）
 
 ```bash
-git install https://github.com/notkiota/git-best-practices.git
+git clone https://github.com/notkiota/git-best-practices.git
 ```
 
 ### 2. ブランチを切る
