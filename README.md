@@ -10,7 +10,7 @@
 ### 1. まずはリモートリポジトリをクローン（ローカルリポジトリを作成）
 
 ```bash
-git install https://github.com/notkiota/git-best-practices.git
+git clone https://github.com/notkiota/git-best-practices.git
 ```
 
 ### 2. ブランチを切る
